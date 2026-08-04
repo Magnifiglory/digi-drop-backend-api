@@ -416,7 +416,8 @@ class StartTaskView(views.APIView):
 
         return response.Response({
             "task_type": task.task_type,
-            "external_link": task.external_link
+            "external_link": task.external_link,
+            "started_at": user_task.started_at
         }, status=status.HTTP_200_OK)
 
 
